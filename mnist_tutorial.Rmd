@@ -1,0 +1,31 @@
+---
+title: "Deep Learning - mnist Tutorial"
+author: "Joe Celebrezze"
+date: "2023-01-07"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Setup
+```{r}
+# Install the keras R package
+#install.packages("keras")
+
+# Install the core Keras library + TensorFlow
+library(keras)
+install_keras()
+
+# If using NVIDIA GPU
+#install_keras(tensorflow = 'gpu')
+
+# mnist dataset
+mnist <- dataset_mnist()
+train_images <- mnist$train$x
+train_labels <- mnist$train$y
+test_images <- mnist$test$x
+test_labels <- mnist$test$y
+```
+
